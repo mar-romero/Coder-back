@@ -1,0 +1,27 @@
+<div class="container text-center mt-5">
+    <h2>VISTA DE TODOS LOS PRODUCTOS</h2>
+    <div id="productsContainer" class="row row-cols-1 row-cols-md-3 g-4 my-4">
+        {{#if empty}}
+            <h3>No hay productos para mostrar</h3>
+        {{/if}}
+        {{#each products}}
+        <div class="col">
+            <div class="card h-100">  
+                <a class="text-decoration-none text-dark" href="/products/{{this.id}}">
+                    <img src="{{this.thumbnail}}" class="card-img-top d-block m-auto" alt="{{this.title}}" style="cursor:pointer">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">{{this.title}}</h5>
+                    <p class="card-text">Price: ${{this.price}} </p>
+                    <button class="btn btn-danger" onclick="deleteProduct({{this.id}})">Eliminar</button>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    <div>
+        <button id="btnBack" class="btn btn-info mt-5">REGRESAR AL FORMULARIO</button>
+    </div>
+</div>
+
+<script src="allProducts.js"></script>

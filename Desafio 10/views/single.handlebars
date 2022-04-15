@@ -1,0 +1,52 @@
+<div class="text-center container d-flex flex-column">
+    <h2>PRODUCTO INDIVIDUAL</h2>
+    <div class="card my-5">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{{product.thumbnail}}" class="img-fluid rounded-start" alt="{{product.title}}">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                <h5 class="card-title">{{product.title}}</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text">Price: ${{product.price}}</p>
+                <p class="card-text"><small class="text-muted">Product ID: {{product.id}}</small></p>
+                </div>
+                <button class="btn btn-danger text-white" onclick="deleteProduct({{product.id}})">ELIMINAR</button>
+                <button class="btn btn-primary text-white" data-bs-toggle="modal" data-bs-target="#producto{{product.id}}">EDITAR</button>
+            </div>
+        </div>
+    </div>
+    <a href="/products"><button id="back" class="btn btn-dark text-white">REGRESAR</button></a>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="producto{{product.id}}" tabindex="-1" aria-labelledby="producto{{product.id}}Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="producto{{product.id}}Label">Editar {{product.title}}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="updateForm" onsubmit="updateProduct({{product.id}})">
+                        <label for="title" class="form-label fw-bold">Titulo</label>
+                        <input type="text" required name="title" class="form-control">
+                        <span class="fw-light">El titulo anterior: {{product.title}}</span>
+                        </br>
+                        <label for="price" class="form-label fw-bold">Precio</label>
+                        <input type="number" required name="price" step=".01" class="form-control">
+                        <span class="fw-light">El precio anterior: ${{product.price}}</span>
+                        </br>
+                        <label for="thumbnail" class="form-label fw-bold">Imagen</label>
+                        <input type="text" required name="thumbnail" class="form-control">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" form="updateForm" class="btn btn-primary">Guardar Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

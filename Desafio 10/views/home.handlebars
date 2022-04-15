@@ -1,0 +1,24 @@
+<div>
+    <header class="bg-dark bg-gradient text-white text-center py-3 shadow-lg mb-5">
+        <h1 class="fw-bolder">API con HANDLEBARS</h1>
+    </header>
+    <div id="principal" class="container text-center">
+        <div id="uploadView mb-5">
+            <h2>FORMULARIO DE CARGA DE PRODUCTOS</h2>
+            <form id="productsForm">
+                <label for="title" class="form-label">Titulo</label>
+                <input type="text" required name="title" class="form-control">
+                <label for="price" class="form-label">Precio</label>
+                <input type="number" required name="price" step=".01" class="form-control">
+                <label for="thumbnail" class="form-label">Imagen</label>
+                <input type="text" required name="thumbnail" class="form-control" placeholder="https://imagen.com/img.jpg">
+                <button type="submit" class="btn btn-success mt-3">CARGAR</button>
+            </form>
+        </div>
+        <div>
+            <button id="btnAll" class="btn btn-info mt-5">VER TODOS LOS PRODUCTOS</button>
+        </div>
+    </div>
+</div>
+
+<script src="home.js"></script>
