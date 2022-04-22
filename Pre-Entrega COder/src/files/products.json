@@ -1,0 +1,22 @@
+[
+	{
+		"title": "Pantalon",
+		"description": "Los mejores pantalones del condado",
+		"code": "abc123",
+		"stock": 6,
+		"price": "7990",
+		"thumbnail": "https://cdn1.iconfinder.com/data/icons/clothes-outfit-line-shop-aholic/512/Pants-512.png",
+		"timestamp": 1649962962684,
+		"id": 1
+	},
+	{
+		"id": 2,
+		"timestamp": 1649962975914,
+		"title": "Remera",
+		"description": "La mejor reme del condado",
+		"code": "def456",
+		"thumbnail": "https://cdn1.iconfinder.com/data/icons/clothes-outfit-line-shop-aholic/512/T-Shirt-512.png",
+		"price": 2990,
+		"stock": 3
+	}
+]
